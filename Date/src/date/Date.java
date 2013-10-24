@@ -1,12 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package date;
 
 /**
- *
- * @author Alex
+ * @author Alex Macniven
+ * A class to represent a date as three integer values, day, month, and year.
  */
 public class Date
 {
@@ -57,6 +53,13 @@ public class Date
 	return year ;
     }
     
+    /**
+    * Method to check whether the given year is leap. Returns a boolean true
+    * if the year is leap and false if the year isn't leap.
+    * The math used for a true return of a leap year;
+    * 1. Year is divisible by 4, and not by 100.
+    * 2. Year is divisible by 4, and by 100, and by 400.
+    */
     public boolean checkForLeap()
     {
         int inYear = this.getYear();
@@ -85,6 +88,10 @@ public class Date
         return leap;
     }
     
+    /**
+     * Creates a String which calls methods getDay(), getMonth(), getYear() and
+     * returns them in the String format "dd/mm/yyyy"
+     */
     public String dateAsString()
     {
         String dateString = 
